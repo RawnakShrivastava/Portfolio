@@ -15,8 +15,8 @@ html{
 }
 .navbar {
     position: fixed !important;
-    height: 120px;
-    background-color: rgb(15, 8, 49) !important;
+    height: 100px;
+    background-color: rgb(8, 5, 26) !important;
     width: 100%;
     padding: 0;
 }
@@ -43,12 +43,12 @@ html{
     border-radius: 10px;
     text-align: center;
 }
+
 .show {
+    float : right;
     position: absolute;
     top : 120px;
-    width: 200px;
     right : 0;
-    padding: 3px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -63,40 +63,42 @@ html{
   }
 
 .show > .navbar-nav {  
-    background-color: rgb(21, 21, 22);
+    background-color: rgb(8, 5, 26) !important;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* padding: 10px; */
-    border-radius: 10px;
     font-size: calc(2px + 1.5vw);
+    overflow: hidden;
+    padding: 10px;
 }
 .nav-item :hover {
     background-color: rgb(58, 58, 55) !important;
     color :rgb(129, 245, 111) !important;
     border-radius: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 /* Sections */
 .sections{
     position: absolute;
-    top : 120px;
+    top : 100px;
     width: 100%;
     z-index: -1;
     overflow-x: hidden;
     background: whitesmoke;
 }
 
+/* Section1 -- banner */
 .section1 {
-    height: 890px;
+    height: 100vh;
     width: 100%;
-    background-color: rgb(15, 8, 49) !important;
-    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%); */
-    clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    background-color: rgb(8, 5, 26) !important;
+    /* clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0); */
+    clip-path: polygon(52% 0, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
 
     }
-    .banner {
+    .banner1 {
         padding-top: 160px; 
         margin : 0 20px 0 20px;  
     }
@@ -122,18 +124,21 @@ html{
             color : rgb(115, 248, 115);
         }
     }
-  /* Section 2 */
+  /* Section 2 -- About*/
 
 .section2{
-      height: 100vh;
-      flex-direction: column;
-      justify-content: start;
+        height: 120vh;
+        flex-direction: column;
+        justify-content: start;
+        background-color: rgb(236, 236, 133);
+        clip-path: polygon(49% 8%, 100% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
+        margin-top : -200px;
     }
     .about-title{
         font-family: poppins;
         font-size: 5rem;
         padding : 10px;
-        margin-top: 100px;
+        margin-top: 150px;
         border-bottom: 1px solid black;
     }
     .dp{  
@@ -143,9 +148,13 @@ html{
         width: 500px;
         height: 500px;
         margin : 0 100px 0 50px;
+        transition: width 1s, height 1s;
     }
-    .dp :hover{
-        width: 550px;
+    .dp:hover{
+        width: 520px;
+        height : 520px;
+        border: 10px solid rgb(5, 24, 80);
+
     }
     .banner2{
         margin-top: 50px;
@@ -159,11 +168,60 @@ html{
         overflow: hidden;
     }
 
+
+    /* Section3 -- Skills */
 .section3{
-    background-color: blueviolet;
-    width: 100%;
-    height: 50vh;
-}
+        height: 110vh;
+        flex-direction: column;
+        justify-content: start;
+        background-color: rgb(200, 210, 236);
+        clip-path: polygon(25% 0, 100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%);
+        z-index: -1;
+    }
+    .skills_gif{
+        margin-left: -150px;
+        width: 750px;
+        height: 550px;
+        border-radius: 20px;
+    }
+    .banner3{
+        margin-top: 80px;
+    }
+    .skills-title{
+        font-family: poppins;
+        font-size: 5rem;
+        padding : 10px;
+        margin-top: 120px;
+        border-bottom: 1px solid black;
+    }
+    .grid-container {
+        margin-left: 100px;
+        display: grid;
+        grid-template-columns: auto auto ;
+      }
+    .grid-item > .album {
+        padding : 10px;
+        border: none;
+        width: 200px;
+        height: 200px;
+        opacity: 80%;
+    }
+    .album:hover{
+        opacity: 100%;
+        cursor: pointer;
+
+    }
+    .section4{
+        height: 110px;
+        background-color: rgb(227, 241, 233);
+    }
+    .btn-social-icon{
+        margin-left: 20px;
+    }
+    .btn-social-icon:hover{
+        background-color: #3F729B;
+  
+    }
 
     /* Responsive Layout */
 @media only screen and (max-width: 1000px) {
@@ -175,7 +233,7 @@ html{
         .section1{
             height: 650px;
         }
-        .banner{
+        .banner1{
             flex-direction: column;
             padding-top: 20px;
         }
@@ -186,7 +244,6 @@ html{
          }
 
          /* Section 2 */
-
          .banner2{
              flex-direction: column;
          }
@@ -201,14 +258,42 @@ html{
              margin: auto;
          }
          .content{
-            font-size: calc(2px + 3vw);
+            font-size: calc(2px + 2vw);
             margin : 80px 0 0 0 ;
             width: 400px;
             overflow: hidden;
             padding : 10px;
+            overflow-y: scroll;
          }
-       }
-@media only screen and (max-width: 400px) {
+
+         /* Section3 */
+
+        .section3{
+             overflow-y: scroll;
+         }
+        .skills-title{
+            font-family: poppins;
+            font-size: 3em;
+            padding : 10px;
+            border-bottom: 1px solid black;
+        }
+        .skills_gif{
+            width: 600px;
+            height: 450px;
+            margin: 0;
+        }
+        .banner3{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+        .grid-container {
+            grid-template-columns: auto auto auto;
+            display: grid;
+            margin: 0;          
+        }
+    }
+@media only screen and (max-width: 500px) {
     
         /* Nav */
         .navbar {
@@ -231,28 +316,25 @@ html{
             animation-duration: .5s;
         }
         /* section1 */
-
         .sections{
             top : 80px;
         }
         .gif{
-            width: 250px;
+            width: 200px;
         }
         .section1{
-            height: 400px;
+            height: 450px;
         }
-        .banner{
+        .banner1{
             flex-direction: column;
             padding-top: 40px;
         }
         .text{
-            margin-top: 50px;
+            margin-top: 30px;
             margin-left: 0;
-            font-size: 1.7em;
+            font-size: 1.4em;
         }
-
         /* Section 2 */
-
         .section2{
             padding-top: 50px;
         }
@@ -276,11 +358,33 @@ html{
             overflow: hidden;
             padding : 10px;
         }
-}
 
-     
-
-
-
+        /* Section3 */
+        .section3{
+            overflow-y: scroll;
+        }
+       .skills-title{
+           font-family: poppins;
+           font-size: 3em;
+           padding : 10px;
+           border-bottom: 1px solid black;
+       }
+       .skills_gif{
+           width: 300px;
+           height: 250px;
+           margin: 0;
+       }
+       .banner3{
+           display: flex;
+           flex-direction: column;
+           padding-bottom: 50px;
+       }
+       .grid-container {
+           grid-template-columns: auto  ;
+           display: grid;
+           margin: 0;  
+           width: 60vw;        
+       }
+} 
 
 
