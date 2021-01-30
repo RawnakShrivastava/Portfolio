@@ -24,17 +24,26 @@ html{
     font-family: poppins;
     margin-left: 30px;
     font-size: calc(4px + 3vw);
-    color :rgb(248, 236, 255) !important ;
+    color :rgb(222, 187, 243) !important ;
+
+} 
+.navbar-brand:hover{
+    color :rgb(129, 245, 111) !important;
+    border-radius: 10px;
+    text-align: center;
+
 }
+  
 .navbar-collapse {
     font-family: poppins;
     justify-content: flex-end !important;
     font-size: 1.3em;
 }
 .nav-link {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(209, 233, 236) !important;
     padding : 25px 35px 25px 35px !important;
-    font-size: calc(4px + 1vw);
+    font-size: calc(3px + 1vw);
+    font-family: poppins;
 
 }
 .nav-item :hover{
@@ -94,9 +103,8 @@ html{
     height: 100vh;
     width: 100%;
     background-color: rgb(8, 5, 26) !important;
-    /* clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0); */
     clip-path: polygon(52% 0, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-
+    
     }
     .banner1 {
         padding-top: 160px; 
@@ -127,18 +135,19 @@ html{
   /* Section 2 -- About*/
 
 .section2{
-        height: 120vh;
+        height: 100vh;
         flex-direction: column;
         justify-content: start;
-        background-color: rgb(236, 236, 133);
-        clip-path: polygon(49% 8%, 100% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
+        background-color: rgb(223, 250, 160);
         margin-top : -200px;
+        overflow-y: scroll;
+
     }
     .about-title{
         font-family: poppins;
         font-size: 5rem;
         padding : 10px;
-        margin-top: 150px;
+        margin-top: 250px;
         border-bottom: 1px solid black;
     }
     .dp{  
@@ -153,7 +162,7 @@ html{
     .dp:hover{
         width: 520px;
         height : 520px;
-        border: 10px solid rgb(5, 24, 80);
+        border: 10px solid rgb(9, 12, 22);
 
     }
     .banner2{
@@ -165,7 +174,6 @@ html{
         max-width: 700px;
         margin-left: 30px;
         font-size: 2em;
-        overflow: hidden;
     }
 
 
@@ -174,9 +182,9 @@ html{
         height: 110vh;
         flex-direction: column;
         justify-content: start;
-        background-color: rgb(200, 210, 236);
-        clip-path: polygon(25% 0, 100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%);
-        z-index: -1;
+        background-color: rgb(220, 247, 157);
+
+
     }
     .skills_gif{
         margin-left: -150px;
@@ -207,16 +215,17 @@ html{
         opacity: 80%;
     }
     .album:hover{
-        opacity: 100%;
+        opacity: 200%;
         cursor: pointer;
 
     }
     .section4{
-        height: 110px;
-        background-color: rgb(227, 241, 233);
+        height: 80px;
+        background-color: rgb(12, 12, 12);
     }
     .btn-social-icon{
         margin-left: 20px;
+        color  : white;
     }
     .btn-social-icon:hover{
         background-color: #3F729B;
@@ -257,13 +266,18 @@ html{
              height: 350px;
              margin: auto;
          }
+         .dp:hover{
+            width: 320px;
+            height : 320px;
+            border: 5px solid rgb(5, 24, 80);
+    
+        }
          .content{
             font-size: calc(2px + 2vw);
             margin : 80px 0 0 0 ;
             width: 400px;
             overflow: hidden;
             padding : 10px;
-            overflow-y: scroll;
          }
 
          /* Section3 */
